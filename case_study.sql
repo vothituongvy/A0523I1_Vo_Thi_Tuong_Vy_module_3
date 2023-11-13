@@ -322,20 +322,3 @@ union all
 select ma_khach_hang as id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 from khach_hang;
 
--- cau21
-create view v_nhan_vien as
-select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, nhan_vien.so_dien_thoai, nhan_vien.ngay_sinh, nhan_vien.dia_chi
-from nhan_vien
-         join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
-where (nhan_vien.dia_chi = 'Hai Chau')
-  and exists
-    (select hop_dong.ma_hop_dong
-     from hop_dong
-     where hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
-       and hop_dong.ngay_lam_hop_dong = '12/12/2019');
-
--- cau22
-update v_nhan_vien
-set nhan_vien.dia_chi = 'Lien Chieu';
-
-
