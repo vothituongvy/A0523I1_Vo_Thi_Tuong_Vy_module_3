@@ -1,0 +1,45 @@
+* {
+    font-family: "Times New Roman";
+    font-size: 15px;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+}
+
+#head-link {
+    height: 30px;
+    line-height: 30px;
+    background-color: #F5F5F5;
+    margin-bottom: 5px;
+    clear: both;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#left-content {
+    width: 30%;
+    height: auto;
+    background-color: #eeeeee;
+    float: left;
+}
+
+a {
+    color: black;
+}
+
+#right-content {
+    width: 68%;
+    height: 150px;
+    float: right;
+
+}
+
+#footer {
+    background-color: #eeeeee;
+    text-align: center;
+    height: 30px;
+    margin-top: 1980px;
+}
